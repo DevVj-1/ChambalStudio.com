@@ -1,6 +1,7 @@
 # Chambal RD – Team-Based UI/UX for Startups & Freelancers
 
-![Chambal RD Hero](https://via.placeholder.com/1200x600/0a0a0f/orange?text=Chambal+RD+Preview)
+<img width="500" height="500" alt="2" src="https://github.com/user-attachments/assets/935d15c3-e0b4-46a3-83fb-49817368ef36" />
+
 
 **Chambal RD** is a two-in-one platform:
 - **For Startups:** Get a complete UI/UX design team (1 lead + 2–3 juniors + AI automation) at the price of a single freelancer – starting at just ₹500 per page.
@@ -38,5 +39,3 @@ Built with a sleek dark theme, glassmorphism, and fully responsive – designed 
 - **Google Forms** – Project intake (embedded)
 
 ---
-
-## 📁 Folder Structure

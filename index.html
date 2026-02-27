@@ -31,6 +31,16 @@
     @media (max-width: 640px) {
       .google-form iframe { height: 1400px; } /* adjust for mobile */
     }
+    
+    /* Fade animation for changing text ------------------------------------------------------- */
+.fade-text {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+.fade-text.fade-out {
+  opacity: 0;
+}
+
   </style>
 <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -87,8 +97,9 @@
           <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
           <span class="text-sm font-medium tracking-widest">TEAM AS A SERVICE</span>
         </div>
+       <!-- Animated headline ----------------------------------------------------------------------------- -->
         <h1 class="text-6xl md:text-7xl font-bold leading-tight heading-font">
-          UI/UX design,<br>
+          <span id="changing-text" class="fade-text">Design UI/UX,</span><br>
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">on a freelancer's budget</span>
         </h1>
         <p class="mt-8 text-xl text-gray-400 max-w-lg">
@@ -553,10 +564,39 @@
         document.getElementById('mobileMenu').classList.add('hidden');
       });
     });
+    <!-- duuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu-->
+    // Text animation for headline
+const phrases = [
+  "Design UI/UX,",
+  "Design Website UI,",
+  "Design App UI,",
+  "Design Business Logo,",
+  "Design Product Packaging & Label,"
+];
+let index = 0;
+const changingSpan = document.getElementById('changing-text');
+
+function changeText() {
+  // Fade out
+  changingSpan.classList.add('fade-out');
+  setTimeout(() => {
+    // Change text
+    index = (index + 1) % phrases.length;
+    changingSpan.textContent = phrases[index];
+    // Fade in
+    changingSpan.classList.remove('fade-out');
+  }, 500); // match the CSS transition duration
+}
+
+// Start interval – change every 3 seconds
+setInterval(changeText, 3000);
+
   </script>
+  <!-- suuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu-->
 </body>
 
 </html>
+
 
 
 
